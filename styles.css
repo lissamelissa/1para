@@ -1,45 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
     background-image: url("stars2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
-    color:#e4d6ff
+    color: #e4d6ff;
+    line-height: 1.6; /* Изменён межстрочный интервал */
+    text-align: center;
+    font-family: 'Montserrat Underline', sans-serif; /* Подключённый шрифт */
 }
+
 h1 {
     font-size: 2.5vw;
+    font-weight: 700; /* Жирный текст */
 }
+
 h2 {
     font-size: 2vw;
+    font-weight: 700;
 }
+
 p {
     background-color: #000000a9;
     border-radius: 1px;
     font-size: 1.5vw; 
+    color: #e4d6ff; /* Цвет текста */
+    text-decoration: none; /* Убрано подчеркивание */
 }
+
 img {
     max-width: 10%;
     height: auto;
 }
+
 a {
-color: #ffc7df;
+    color: #ffc7df; /* Цвет ссылок */
+    text-decoration: none; /* Убрано подчеркивание */
 }
+
 a:hover {
     color: #ffafd2; 
 }
+
 p {
     cursor: url('cursor.png'), auto;
 }
+
 ::-webkit-scrollbar {
     width: 15px;
 }
+
 ::-webkit-scrollbar-thumb {
     background-color: #e4d6ff;
     border-radius: 3px;
 }
+
 ::-webkit-scrollbar-track {
     background-color: rgb(0, 0, 0);
 }
+
 .decoration > p {
     color: #9d75ee;
-    font-size: 5vw
-  }
+    font-size: 5vw;
+}
