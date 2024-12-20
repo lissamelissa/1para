@@ -1,32 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    box-sizing: border-box; /* Применение border-box для всех элементов */
+}
+
 body {
     background-image: url("stars2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
     color: #e4d6ff;
-    line-height: 1.6; /* Изменён межстрочный интервал */
-    text-align: center;
-    font-family: 'Montserrat Underline', sans-serif; /* Подключённый шрифт */
+    line-height: 1.4;
+    text-align: left;
+    font-family: 'Montserrat Underline', sans-serif; 
+    min-height: 100vh; /* Минимальная высота для body */
+    max-height: 1000vh; /* Максимальная высота для body */
 }
 
 h1 {
     font-size: 2.5vw;
-    font-weight: 700; /* Жирный текст */
+    font-weight: 700; 
+    border: solid; 
+    max-width: 90%; /* Максимальная ширина заголовка */
+    z-index: 1; /* Уровень стека для заголовка */
+    position: relative; /* Позиционирование */
 }
 
 h2 {
     font-size: 2vw;
     font-weight: 700;
+    max-width: 80%; /* Максимальная ширина заголовка */
+    z-index: 1; /* Уровень стека для заголовка */
+    position: relative; /* Позиционирование */
 }
 
 p {
     background-color: #000000a9;
-    border-radius: 1px;
+    border-radius: 3px;
     font-size: 1.5vw; 
-    color: #e4d6ff; /* Цвет текста */
-    text-decoration: none; /* Убрано подчеркивание */
+    color: #e4d6ff; 
+    text-decoration: none;
+    min-height: 50px; /* Минимальная высота параграфа */
+    padding: 10px; /* Отступы для параграфа */
+    position: relative; /* Позиционирование */
+    z-index: 1; /* Уровень стека для текста */
 }
 
 img {
@@ -35,8 +52,8 @@ img {
 }
 
 a {
-    color: #ffc7df; /* Цвет ссылок */
-    text-decoration: none; /* Убрано подчеркивание */
+    color: #ffc7df;
+    text-decoration: none; 
 }
 
 a:hover {
@@ -60,7 +77,29 @@ p {
     background-color: rgb(0, 0, 0);
 }
 
-.decoration > p {
+.decoration {
     color: #9d75ee;
-    font-size: 5vw;
+    font-size: 1.5vw;
+    bottom: -160px;
+    left: 10px;
+    position: absolute; 
+    padding: 20px 20px;
+    z-index: 3;
 }
+
+.inform_about_me {
+    p {
+        background-color: #2e1a5700
+    }
+    position: fixed;
+    max-width: 600px; /* Максимальная ширина параграфа */
+    bottom: 10px;
+    right: 10px;
+    background-color: #2e1a5783;
+    color: #9d75ee;
+    padding: 1px 20px;
+    border-radius: 5px;
+    font-size: 1vw;
+    z-index: 3;
+    border: solid;
+  }
