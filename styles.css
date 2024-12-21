@@ -13,17 +13,17 @@ body {
     line-height: 1.4;
     text-align: left;
     font-family: 'Montserrat Underline', sans-serif; 
-    min-height: 100vh; /* Минимальная высота для body */
-    max-height: 1000vh; /* Максимальная высота для body */
+    min-height: 100vh;
+    max-height: 1000vh; 
 }
 
 h1 {
     font-size: 2.5vw;
     font-weight: 700; 
     border: solid; 
-    max-width: 90%; /* Максимальная ширина заголовка */
-    z-index: 1; /* Уровень стека для заголовка */
-    position: relative; /* Позиционирование */
+    max-width: 90%;
+    z-index: 1;
+    position: relative;
 }
 
 h2 {
@@ -35,20 +35,31 @@ h2 {
 }
 
 p {
-    background-color: #000000a9;
+    background-color:  rgba(0, 0, 0, 0.66); /* RGBA */
     border-radius: 3px;
     font-size: 1.5vw; 
     color: #e4d6ff; 
     text-decoration: none;
-    min-height: 50px; /* Минимальная высота параграфа */
-    padding: 10px; /* Отступы для параграфа */
-    position: relative; /* Позиционирование */
-    z-index: 1; /* Уровень стека для текста */
+    min-height: 50px;
+    padding: 10px; 
+    position: relative;
+    z-index: 1;
 }
 
 img {
     max-width: 10%;
     height: auto;
+}
+
+.container {
+    display: flex; /* Flex для контейнера */
+    justify-content: space-around; /* распределение элементов с равными отступами */
+    align-items: center; /* вертикальное выравнивание */
+    margin: auto; /* центрирование контейнера */
+}
+
+ul{
+    font-size: 1.5vw; 
 }
 
 a {
@@ -80,11 +91,11 @@ p {
 .decoration {
     color: #9d75ee;
     font-size: 1.5vw;
-    bottom: -160px;
+    bottom: -210px;
     left: 10px;
     position: absolute; 
     padding: 20px 20px;
-    z-index: 3;
+    z-index: 2;
 }
 
 .inform_about_me {
