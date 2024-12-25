@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
-    box-sizing: border-box; /* Применение border-box для всех элементов */
+    box-sizing: border-box; 
 }
 
 body {
@@ -24,6 +24,9 @@ h1 {
     max-width: 90%;
     z-index: 1;
     position: relative;
+    text-align: center;
+    padding: 1px; /* Добавлено расстояние внутри заголовка для уменьшения пространства */
+    margin: 10px 0; /* Уменьшение внешнего отступа, если необходимо */
 }
 
 h2 {
@@ -32,6 +35,7 @@ h2 {
     max-width: 80%; /* Максимальная ширина заголовка */
     z-index: 1; /* Уровень стека для заголовка */
     position: relative; /* Позиционирование */
+    border: solid; 
 }
 
 p {
@@ -91,8 +95,8 @@ p {
 .decoration {
     color: #9d75ee;
     font-size: 1.5vw;
-    bottom: -210px;
-    left: 10px;
+    top: 3.7vw;
+    right: 10px;
     position: absolute; 
     padding: 20px 20px;
     z-index: 2;
@@ -103,7 +107,7 @@ p {
         background-color: #2e1a5700
     }
     position: fixed;
-    max-width: 600px; /* Максимальная ширина параграфа */
+    max-width: 50vw; /* Максимальная ширина параграфа */
     bottom: 10px;
     right: 10px;
     background-color: #2e1a5783;
@@ -114,3 +118,42 @@ p {
     z-index: 3;
     border: solid;
   }
+
+  ::selection {
+    background-color: #ffc7dfb9;
+    color: #2e1a57;
+  }
+  
+  /* Общие стили для полей формы */
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #9d75ee;
+    border-radius: 4px;
+    font-family: 'Montserrat Underline', sans-serif;
+    font-size: 1.2vw;
+    background-color: rgba(46, 26, 87, 0.7);
+    color: #e4d6ff;
+    transition: all 0.3s ease;
+  }
+
+/* Стили для подсказок (placeholder) */
+input::placeholder {
+    color: #b3b3b3;
+    font-style: italic;
+}
+
+/* Обязательные поля */
+input[required], select[required] {
+    border: 2px solid #ffb4b4;
+    background-color: rgba(255, 180, 180, 0.277);
+}
+
+/* Стилизация текста у чекбоксов и радиокнопок */
+.checkbox-group label {
+    font-size: 1.4vw;
+    color: #5905ff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}

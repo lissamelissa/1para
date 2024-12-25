@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Регистрация пользователя</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+        background-image: url("stars2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; 
+        color: #e4d6ff;
+        line-height: 1.4;
+        text-align: left;
+        font-family: 'Montserrat Underline', sans-serif; 
+        min-height: 100vh;
+        max-height: 1000vh; 
+
+      }
+
+      .container {
+        max-width: 400px;
+        margin: auto;
+        padding: 25px;
+        border: 2px solid #cccccc9b;
+        border-radius: 5px;
+      }
+
+      .group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 1.1vw;
+      }
+
+      legend{
+        font-size: 1.5vw;
+      }
+
+      input, select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 2px solid #9d75ee;
+        border-radius: 4px;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #ffc7dfae;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 270px;
+      }
+
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 10px 0;
+      }
+      
+      /* Выравнивание чекбоксов с текстом */
+      .checkbox-group {
+        display: flex;
+        flex-direction: column; /* Располагаем элементы вертикально */
+        gap: 1vw; /* Отступы между строками */
+      }
+
+      .checkbox-group div {
+        display: flex; /* Используем flexbox для выравнивания */
+        align-items: center; /* Центрируем чекбоксы и текст по вертикали */
+        
+    }
+
+      .checkbox-group input[type="checkbox"] {
+        margin-right: 10px; /* Расстояние между чекбоксом и текстом */
+        width: 18px; /* Фиксируем ширину чекбокса */
+        height: 16px; /* Фиксируем высоту чекбокса */
+      }
+
+      .checkbox-group label {
+        font-size: 1.1vw;
+        color: #f1f1f1a3; /* Цвет текста */
+        cursor: pointer; /* Указывает, что текст кликабельный */
+      }
+
+      input[type=radio]:checked + label {
+        color: #f1f1f1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Регистрация нового пользователя</h1>
+      <nav>
+        <a href="1 пара.html">На главную</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <form action="/submit" method="POST">
+        <fieldset>
+          <legend>Личная информация</legend>
+          
+          <div class="group">
+            <label for="name">Имя <span style="color: red;">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+          </div>
+
+          <div class="group">
+            <label for="birthdate">Дата рождения <span style="color: red;">*</span></label>
+            <input type="date" id="birthdate" name="birthdate" required>
+          </div>
+
+          <div class="group">
+            <label for="gender">Пол <span style="color: red;">*</span></label>
+            <select id="gender" name="gender" required>
+              <option value="" style="background-color: #41237c7d;">Выберите пол</option>
+              <option value="male" style="background-color: #41237c7d;"> Мужчина</option>
+              <option value="female" style="background-color: #41237c7d;">Женщина</option>
+            </select>
+          </div>
+
+          <div class="group">
+            <label for="password">Пароль <span style="color: red;">*</span></label>
+            <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Контактные данные</legend>
+
+          <div class="group">
+            <label for="email">Email <span style="color: red;">*</span></label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+          </div>
+
+          <div class="group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (999) 999-99-99">
+          </div>
+
+
+          <div class="group">
+            <label>Удобный интервал для связи</label>
+            <div class="checkbox-group">
+              <div>
+                <input type="checkbox" id="morning" name="contact_time" value="morning">
+                <label for="morning">Утро</label>
+              </div>
+              <div>
+                <input type="checkbox" id="day" name="contact_time" value="day">
+                <label for="day">День</label>
+              </div>
+              <div>
+                <input type="checkbox" id="evening" name="contact_time" value="evening">
+                <label for="evening">Вечер</label>
+              </div>
+              <div>
+                <input type="checkbox" id="night" name="contact_time" value="night">
+                <label for="night">Ночь</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+    </div>
+  </body>
+</html>
