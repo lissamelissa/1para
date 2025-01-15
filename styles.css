@@ -138,22 +138,29 @@ p {
     transition: all 0.3s ease;
   }
 
-/* Стили для подсказок (placeholder) */
 input::placeholder {
     color: #b3b3b3;
     font-style: italic;
 }
 
-/* Обязательные поля */
 input[required], select[required] {
     border: 2px solid #ffb4b4;
     background-color: rgba(255, 180, 180, 0.277);
 }
 
-/* Стилизация текста у чекбоксов и радиокнопок */
 .checkbox-group label {
     font-size: 1.4vw;
     color: #5905ff;
     cursor: pointer;
     transition: color 0.3s ease;
+}
+
+a:active {
+    color: #e4d6ff; 
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+a:focus {
+    outline: 2px dashed #5905ff;
+    outline-offset: 2px;
 }
