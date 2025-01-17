@@ -73,6 +73,7 @@ a {
 
 a:hover {
     color: #ffafd2; 
+    transition: all 0.7s ease
 }
 
 p {
@@ -115,6 +116,7 @@ p {
     padding: 1px 20px;
     border-radius: 5px;
     font-size: 1vw;
+    visibility: hidden;
     z-index: 3;
     border: solid;
   }
@@ -163,4 +165,55 @@ a:active {
 a:focus {
     outline: 2px dashed #5905ff;
     outline-offset: 2px;
+}
+button:hover {
+    background-color: rgba(137, 113, 255, 0.404);
+    transition: all 0.7s ease-in-out;
+  }
+
+@keyframes loading_anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.loader {
+    width: 3vw;
+    height: 3vw;
+    border: 0.3vw solid #9d75ee;
+    border-top: 1vw solid transparent;
+    border-radius: 50%;
+    z-index: 10;
+    animation: loading_anim 1.2s linear infinite;
+}
+
+.nad_loader {
+    border: 0.3vw solid #9d75ee;
+    border-radius: 5%;
+    background-color: #4800ff5d;
+    width: 8vw;
+    height: 8vw;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.nad_loader:hover .loader{
+    opacity: 0;
+}
+
+.nad_loader:hover .inform_about_me {
+    opacity: 1;
+    visibility: visible;
+}
+.nad_loader:hover{
+    visibility: hidden;
+
 }

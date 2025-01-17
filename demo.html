@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Демонстрация CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #242424;
+      color: #ffe4e4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; 
+      min-height: 100vh; 
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    .example {
+      margin: 50px 0;
+      text-align: center;
+      padding: 30px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 300px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      box-sizing: border-box;
+    }
+
+    .linear-gradient {
+      background: linear-gradient(to right, #ff746f, #ffc9bb);
+    }
+
+    .radial-gradient {
+      background: radial-gradient(circle, #ff746f, #ffc9bb);
+    }
+
+    .conic-gradient {
+      background: conic-gradient(from 90deg, #ff746f, #ffc9bb);
+    }
+
+    .rotate {
+      background: #ff746f;
+      transform: rotate(45deg);
+    }
+
+    .scale {
+      background: #ffc9bb;
+      transform: scale(1.2);
+    }
+
+    .rotate-3d {
+      background: #ff746f;
+      transform: rotate3d(1, 1, 0, 45deg);
+    }
+
+    .perspective {
+      background: #ffc9bb;
+      transform: perspective(500px) rotateY(45deg);
+    }
+
+    .transition-scale {
+      background: #ff746f;
+      transition: transform 0.5s ease;
+    }
+
+    .transition-scale:hover {
+      transform: scale(1.2);
+    }
+
+    .transition-opacity {
+      background: #ffc9bb;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .transition-opacity:hover {
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Примеры CSS свойств</h1>
+
+  <div class="example linear-gradient">
+    <p>Линейный градиент</p>
+  </div>
+
+  <div class="example radial-gradient">
+    <p>Радиальный градиент</p>
+  </div>
+
+  <div class="example conic-gradient">
+    <p>Конический градиент</p>
+  </div>
+
+  <div class="example rotate">
+    <p>2D Преобразование: Поворот</p>
+  </div>
+
+  <div class="example scale">
+    <p>2D Преобразование: Масштабирование</p>
+  </div>
+
+  <div class="example rotate-3d">
+    <p>3D Преобразование: Поворот 3D</p>
+  </div>
+
+  <div class="example perspective">
+    <p>3D Преобразование: Перспектива</p>
+  </div>
+
+  <div class="example transition-scale">
+    <p>Переход: Масштабирование</p>
+  </div>
+
+  <div class="example transition-opacity">
+    <p>Переход: Изменение прозрачности</p>
+  </div>
+
+</body>
+</html>
